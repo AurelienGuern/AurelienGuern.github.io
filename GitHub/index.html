@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Aurelien Guern - GitHub</title>
@@ -16,7 +22,7 @@
             <a href="#Formation">Ma formation</a>
             <a href="mailto:aurelien.guern@gmail.com">Contact</a>
             <a href="https://www.linkedin.com/in/aur%C3%A9lien-g-8aa253193/
-            "><img src="logo-linkedin.png" alt="logo linkedin"></a>
+            "><img src="logo-linkedin.webp" alt="logo linkedin"></a>
             <a href="#Projets">Mes projets</a>
 
         </nav>   
@@ -30,29 +36,49 @@
             <p>J'ai commencé la formation "Développeur web et web mobile" de chez O'Clock en septembre 2023.</p>
             <p>Vous trouverez ici mon avancement dans le cadre de cette formation, et mes projets.</p>
             
-<ul>
-<li>HTML 5</li>
-<li>CSS 3</li>
-<li>PHP</li>
 
-</ul>
+
+<div class="dashboard">
+    <ul>
+        <svg>
+          <circle class="bg" cx="57" cy="57" r="52"/>
+          <circle class="meter-1" cx="57" cy="57" r="52" />
+          <li id="html">HTML 5</li>
+        </svg>
+        <svg>
+          <circle class="bg" cx="57" cy="57" r="52" />
+          <circle class="meter-2" cx="57" cy="57" r="52" />
+          <li id="css"> CSS 3</li>
+        </svg>
+        <svg>
+          <circle class="bg" cx="57" cy="57" r="52" />
+          <circle class="meter-3" cx="57" cy="57" r="52" />
+          <li id="PHP">PHP</li>
+
+        </svg>
+    </ul>
+
+   
+  </div>
+  
+
+
         </section>
         <section class="projets">
             <ul>
-                <li>
-                    <a href="lien"> image du projet cliquable</a>
-                    <figcaption>Nom du projet</figcaption>
+                <li class="card">
+                    <a href="#"> <img src="projet 1.png" alt="projet site psychologue libérale"></a>
+                    <figcaption>Site de psychologue libérale</figcaption>
                 </li>
-                <li>
-                    <a href="lien"> image du projet cliquable</a>
-                    <figcaption>Nom du projet</figcaption>
+                <li class="card">
+                    <a href="#"> <img src="projet 2.png" alt="site pension animale"></a>
+                    <figcaption>Site de pension animale</figcaption>
                 </li>
-                <li>
-                    <a href="lien"> image du projet cliquable</a>
-                    <figcaption>Nom du projet</figcaption>
+                <li class="card">
+                    <a href="#"> <img src="projet 3.png" alt="formulaire du site de pension"></a>
+                    <figcaption>Formulaire sur le site de pension</figcaption>
                 </li>
             </ul>
-
 
 
 
