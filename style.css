@@ -22,6 +22,7 @@ header {
   position: fixed;
   right: 5%;
   left: 5%;
+  top : 10px;
   z-index: 999;
   box-shadow: 0 0 10px RGB(31, 81, 255), 0 0 10px RGB(31, 81, 255),
     0 0 10px RGB(31, 81, 255), 0 0 10px RGB(31, 81, 255),
@@ -50,12 +51,22 @@ header span {
   letter-spacing: 0.3em;
 }
 
+.cache {
+background-color: #000;
+top: 0;
+height: 90px;
+z-index: 998;
+position: fixed;
+width: 100%;
+}
+
 main {
   padding-top: 12em;
   display: flex;
   width: 85%;
   margin: auto;
   justify-content: space-between;
+  z-index: 1;
 }
 main p {
   line-height: 1.4em;
