@@ -1,0 +1,350 @@
+body {
+    background-image: linear-gradient(to top,
+        #0c3483 0%,
+        #a2b6df 100%,
+        #6b8cce 100%,
+        #a2b6df 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 12px;
+    margin: 0;
+    padding: 10px;
+    font-family: Montserrat, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  header .container {
+    max-width: 1600px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  header .container p {
+    text-transform: uppercase;
+    color: #222;
+    font-weight: 900;
+    color: transparent;
+    font-size: 0px;
+  }
+  
+  header .container p span {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-size: clamp(20px, 8vw, 120px);
+  }
+  
+  header .container p span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+  }
+  
+  header .container p:nth-child(1) {
+    font-weight: 300;
+    animation: txt-appearance 0s 1s forwards;
+  }
+  
+  header .container p:nth-child(2) {
+    animation: txt-appearance 0s 1.25s forwards;
+  }
+  
+  header p:nth-child(1) span::after {
+    background: salmon;
+    animation: slide-in 0.75s ease-out forwards,
+      slide-out 0.75s 1s ease-out forwards;
+  }
+  
+  header .container p:nth-child(2) span::after {
+    background: royalblue;
+    animation: slide-in 0.75s 0.3s ease-out forwards,
+      slide-out 0.75s 1.3s ease-out forwards;
+  }
+  
+  @keyframes slide-in {
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes slide-out {
+    100% {
+      transform: translateX(100%)
+    }
+  }
+  
+  @keyframes txt-appearance {
+    100% {
+      color: #222;
+    }
+  }
+  
+  
+  
+  /* Je fais la partie nav */
+  /* Je fais la partie nav */
+  
+  nav {
+    width: 100%;
+  }
+  
+  .liens {
+    max-height: 100px;
+    min-height: 30px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  
+  .liens img {
+    height: 40px;
+  }
+  
+  .liens #mail img {
+    height: 50px;
+  }
+  
+  .liens a :hover {
+    transition: 1s;
+    transform: scale(1.3);
+  }
+  
+  
+  
+  /* partie liens du portfolio */
+  
+  main {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  
+  .projets {
+    width: fit-content;
+    text-align: center;
+    color: white;
+  
+  }
+  
+  .projets li {
+    width: 45%;
+  
+  }
+  
+  .projets ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .projets a {
+    text-decoration: none;
+    padding: 1em 1em 0;
+    color: black;
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+  
+  .projets a :hover {
+    transition: 1s;
+    transform: scale(1.3);
+  }
+  
+  
+  
+  .projets img {
+    width: 100%;
+    height: auto;
+    border-radius: 2em;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 1em;
+    margin: 4.5em auto;
+    border-radius: 2em;
+    border: 3px solid black;
+  }
+  
+  .projets figcaption {
+    margin: 0;
+    padding-top: 0.5em;
+    font-size: 1.3em;
+  }
+  
+  
+  .form {
+    width: 340px;
+    height: 440px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(30vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative
+  }
+  
+  .form h2 {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    width: 180px;
+    color: #78788c;
+    border-bottom: 3px solid #6b8cce
+  }
+  
+  .form input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid #6b8cce
+  }
+  
+  .form input:focus {
+    border-bottom: 2px solid #6b8cce
+  }
+  
+  .form p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #6b8cce
+  }
+  
+  .form button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #6b8cce;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all .3s
+  }
+  
+  .form button:hover {
+    background: #0c3483;
+    color: #fff
+  }
+  
+  .form div {
+    content: 'Hi';
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: #50505a;
+    color: #fff;
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000
+  }
+  
+  .form span {
+    margin: 0 5px 0 15px
+  }
+  
+  .form a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .home {
+    padding: 3em;
+  }
+  
+  .home {
+    padding: 5em 1em;
+    width: 85%;
+    margin: auto;
+  }
+  
+  
+  
+  .home .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 8em;
+    font-size: 2em;
+  }
+  
+  .home a {
+    text-decoration: none;
+    color: black;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 1em;
+  }
+  
+  
+  .button_slide {
+    color: #FFF;
+    border: 2px solid rgb(216, 2, 134);
+    border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 salmon;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+  
+  .slide_right:hover {
+    box-shadow: inset 400px 0 0 0 salmon;
+  }
+  
+  
+  #outer {
+    width: 364px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+  }
