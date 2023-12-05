@@ -110,7 +110,7 @@ body {
   
   
   /* Je fais la partie nav */
-  /* Je fais la partie nav */
+  
   
   nav {
     width: 100%;
@@ -142,165 +142,88 @@ body {
   
   
   /* partie liens du portfolio */
+
+  /* ancienne partie en cards */
   
   main {
     width: 85%;
     margin: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  
-  .projets {
-    width: fit-content;
-    text-align: center;
-    color: white;
-  
-  }
-  
-  .projets li {
-    width: 45%;
-  
-  }
-  
-  .projets ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  .projets a {
-    text-decoration: none;
-    padding: 1em 1em 0;
-    color: black;
-    font-size: 1.3em;
-    font-weight: 700;
-  }
-  
-  .projets a :hover {
-    transition: 1s;
-    transform: scale(1.3);
-  }
-  
-  
-  
-  .projets img {
-    width: 100%;
-    height: auto;
-    border-radius: 2em;
-  }
-  
-  .card {
-    display: flex;
     flex-direction: column;
-    width: 40%;
+    padding-bottom: 3em;
+    
+  }
+
+
+.containerSlider {
+  padding-top: 3em;
+  margin: auto;
+}
+
+.slider {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: relative;
+  overflow: hidden; /* <===  */
+  border-radius: 15px;
+}
+
+.slide {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: absolute;
+  transition: all 0.5s;
+  position: relative;
+}
+.description {
+  height: 1.8em;
+  background-color: black;
+  font-size: larger;
+  font-weight: 900;
+  color: white;
+  width: 55%;
+  position: absolute;
+  bottom: calc(7% - 1.8em);
+  border-radius: 0 10px 10px 0;
+  
+
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+.btn:active {
+  transform: scale(1.1);
+}
+.btn-prev {
+  top: 45%;
+  left: 2%;
+}
+
+.btn-next {
+  top: 45%;
+  right: 2%;
+}
+
+
+  .home {
     padding: 1em;
-    margin: 4.5em auto;
-    border-radius: 2em;
-    border: 3px solid black;
-  }
-  
-  .projets figcaption {
-    margin: 0;
-    padding-top: 0.5em;
-    font-size: 1.3em;
-  }
-  
-  
-  .form {
-    width: 340px;
-    height: 440px;
-    background: #e6e6e6;
-    border-radius: 8px;
-    box-shadow: 0 0 40px -10px #000;
-    margin: calc(30vh - 220px) auto;
-    padding: 20px 30px;
-    max-width: calc(100vw - 40px);
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    position: relative
-  }
-  
-  .form h2 {
-    margin: 10px 0;
-    padding-bottom: 10px;
-    width: 180px;
-    color: #78788c;
-    border-bottom: 3px solid #6b8cce
-  }
-  
-  .form input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    background: none;
-    outline: none;
-    resize: none;
-    border: 0;
-    font-family: 'Montserrat', sans-serif;
-    transition: all .3s;
-    border-bottom: 2px solid #6b8cce
-  }
-  
-  .form input:focus {
-    border-bottom: 2px solid #6b8cce
-  }
-  
-  .form p:before {
-    content: attr(type);
-    display: block;
-    margin: 28px 0 0;
-    font-size: 14px;
-    color: #6b8cce
-  }
-  
-  .form button {
-    float: right;
-    padding: 8px 12px;
-    margin: 8px 0 0;
-    font-family: 'Montserrat', sans-serif;
-    border: 2px solid #6b8cce;
-    background: 0;
-    color: #5a5a6e;
-    cursor: pointer;
-    transition: all .3s
-  }
-  
-  .form button:hover {
-    background: #0c3483;
-    color: #fff
-  }
-  
-  .form div {
-    content: 'Hi';
-    position: absolute;
-    bottom: -15px;
-    right: -20px;
-    background: #50505a;
-    color: #fff;
-    width: 320px;
-    padding: 16px 4px 16px 0;
-    border-radius: 6px;
-    font-size: 13px;
-    box-shadow: 10px 10px 40px -14px #000
-  }
-  
-  .form span {
-    margin: 0 5px 0 15px
-  }
-  
-  .form a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .home {
-    padding: 3em;
-  }
-  
-  .home {
-    padding: 5em 1em;
     width: 85%;
     margin: auto;
   }
@@ -311,7 +234,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: 8em;
+    padding-top: 5em;
     font-size: 2em;
   }
   
@@ -348,3 +271,5 @@ body {
     margin: 50px auto 0 auto;
     text-align: center;
   }
+
+  
