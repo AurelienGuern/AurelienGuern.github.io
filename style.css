@@ -42,7 +42,7 @@ body {
   }
   
   
-  header .container p {
+  header .container h1 {
     text-transform: uppercase;
     color: #222;
     font-weight: 900;
@@ -50,14 +50,14 @@ body {
     font-size: 0px;
   }
   
-  header .container p span {
+  header .container h1 span {
     display: inline-block;
     position: relative;
     overflow: hidden;
     font-size: clamp(20px, 8vw, 120px);
   }
   
-  header .container p span::after {
+  header .container h1 span::after {
     content: "";
     display: block;
     position: absolute;
@@ -68,22 +68,24 @@ body {
     transform: translateX(-100%);
   }
   
-  header .container p:nth-child(1) {
-    font-weight: 300;
+  header .container h1:nth-child(2) {
+    font-weight: 300;}
+
+  header .container h1:nth-child(1) {
     animation: txt-appearance 0s 1s forwards;
   }
   
-  header .container p:nth-child(2) {
+  header .container h1:nth-child(2) {
     animation: txt-appearance 0s 1.25s forwards;
   }
   
-  header p:nth-child(1) span::after {
+  header h1:nth-child(1) span::after {
     background: salmon;
     animation: slide-in 0.75s ease-out forwards,
       slide-out 0.75s 1s ease-out forwards;
   }
   
-  header .container p:nth-child(2) span::after {
+  header .container h1:nth-child(2) span::after {
     background: royalblue;
     animation: slide-in 0.75s 0.3s ease-out forwards,
       slide-out 0.75s 1.3s ease-out forwards;
@@ -138,138 +140,62 @@ body {
     transition: 1s;
     transform: scale(1.3);
   }
-  
-  
+
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  aside img {
+   height: 2em;
+   width: auto;
+  }
+
+  aside {
+    visibility: hidden;
+    padding: 5%;
+    text-align: center;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+  }
   
   /* partie liens du portfolio */
 
   /* ancienne partie en cards */
   
-  main {
-    width: 85%;
+  
+  article {
+    opacity: 0;
+    transition: opacity 1s ease 1s;
+    padding-top: 4em;
+    width: 60%;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 3em;
-    
+    position: relative;
   }
 
-
-.containerSlider {
-  padding-top: 3em;
-  margin: auto;
-}
-
-.slider {
-  width: 100%;
-  max-width: 800px;
-  height: 350px;
-  position: relative;
-  overflow: hidden; /* <===  */
-  border-radius: 15px;
-}
-
-.slide {
-  width: 100%;
-  max-width: 800px;
-  height: 350px;
-  position: absolute;
-  transition: all 0.5s;
-  position: relative;
-}
-.description {
-  height: 1.8em;
-  background-color: black;
-  font-size: larger;
-  font-weight: 900;
-  color: white;
-  width: 55%;
-  position: absolute;
-  bottom: calc(7% - 1.8em);
-  border-radius: 0 10px 10px 0;
-  
-
-}
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.btn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  border: none;
-  border-radius: 50%;
-  z-index: 10px;
-  cursor: pointer;
-  background-color: #fff;
-  font-size: 18px;
-}
-.btn:active {
-  transform: scale(1.1);
-}
-.btn-prev {
-  top: 45%;
-  left: 2%;
-}
-
-.btn-next {
-  top: 45%;
-  right: 2%;
-}
-
-
-  .home {
-    padding: 1em;
-    width: 85%;
-    margin: auto;
-  }
-  
-  
-  
-  .home .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 5em;
-    font-size: 2em;
-  }
-  
-  .home a {
-    text-decoration: none;
-    color: black;
-    border: 1px black solid;
-    border-radius: 5px;
-    padding: 1em;
-  }
-  
-  
-  .button_slide {
-    color: #FFF;
-    border: 2px solid rgb(216, 2, 134);
-    border-radius: 0px;
-    padding: 18px 36px;
-    display: inline-block;
-    letter-spacing: 1px;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 salmon;
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    transition: ease-out 0.4s;
-  }
-  
-  .slide_right:hover {
-    box-shadow: inset 400px 0 0 0 salmon;
-  }
-  
-  
-  #outer {
-    width: 364px;
-    margin: 50px auto 0 auto;
-    text-align: center;
+  article img {
+    width: 100%;
+    border-radius: 4%;
   }
 
-  
+  figcaption {
+    font-size: larger;
+    font-weight: 800;
+    position: absolute;
+    bottom: calc(4%);
+    left: calc(6%);
+    background-color: white;
+    border-radius: 5%;
+    ;
+  }

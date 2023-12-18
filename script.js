@@ -1,49 +1,62 @@
-"use strict";
-// Select all slides
-const slides = document.querySelectorAll(".slide");
+const scrollDown = document.querySelector('aside');
 
-// loop through slides and set each slides translateX
-slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
-});
 
-// select next slide button
-const nextSlide = document.querySelector(".btn-next");
+setTimeout(() => {
+  const showScroll = document.querySelector('aside');
 
-// current slide counter
-let curSlide = 0;
-// maximum number of slides
-let maxSlide = slides.length - 1;
+  showScroll.style.visibility = 'visible';
 
-// add event listener and navigation functionality
-nextSlide.addEventListener("click", function () {
-  // check if current slide is the last and reset current slide
-  if (curSlide === maxSlide) {
-    curSlide = 0;
-  } else {
-    curSlide++;
+}, 3200);
+
+window.addEventListener('wheel', handleScroll);
+
+function handleScroll(event) {
+  scrollDown.style.visibility = "hidden";
+  console.log(scrollY);
+
+
+  if (scrollY > 0) {
+    setTimeout(() => {
+      const article1 = document.querySelector('#article1');
+      article1.style.opacity = 1;
+    }, 500);
+
   }
 
-  //   move slide by -100%
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-});
-
-// select next slide button
-const prevSlide = document.querySelector(".btn-prev");
-
-// add event listener and navigation functionality
-prevSlide.addEventListener("click", function () {
-  // check if current slide is the first and reset current slide to last
-  if (curSlide === 0) {
-    curSlide = maxSlide;
-  } else {
-    curSlide--;
+  if (scrollY > 150 && scrollY < 250) {
+    setTimeout(() => {
+      const article2 = document.querySelector('#article2');
+      article2.style.opacity = 1;
+    }, 500);
   }
 
-  //   move slide by 100%
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-});
+  if (scrollY > 251 && scrollY < 400) {
+    setTimeout(() => {
+      const article3 = document.querySelector('#article3');
+      article3.style.opacity = 1;
+    }, 500);
+  }
+  if (scrollY > 401 && scrollY < 600) {
+    setTimeout(() => {
+      const article4 = document.querySelector('#article4');
+      article4.style.opacity = 1;
+    }, 500);
+  }
+
+}
+
+
+// var scrollPos = 0;
+// var oldDeltaY = scrollY;
+// window.addEventListener('wheel', scrollCount);
+// function scrollCount (event, scrollPos, oldDeltaY) {
+
+// if (scrollY > oldDeltaY) {
+//   scrollPos++;
+// }
+// else {
+//   scrollPos = scrollPos -1;
+// }
+//   return scrollPos;
+// }
+// console.log(scrollPos);
